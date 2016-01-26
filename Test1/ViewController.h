@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource>
 
+@property (nonatomic,strong) IBOutlet UITextField *wordText;
+@property (nonatomic,strong) IBOutlet UITableView *resultTableView;
+@property (nonatomic,strong) IBOutlet UIPickerView *searchOptionPickerView;
+
+@property (nonatomic,strong) NSMutableArray *resultArray;
+@property (nonatomic,strong) NSArray *seacrhOptionArray;
+
+//Methods
+-(IBAction)searchAcronymns:(id)sender;
 
 @end
 
